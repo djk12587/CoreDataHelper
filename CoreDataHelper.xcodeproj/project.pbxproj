@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		D5AF3C0319A28B4800BF0948 /* CoreDataHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = D5AF3C0219A28B4800BF0948 /* CoreDataHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D5AF3C0D19A28B4800BF0948 /* CoreDataHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AF3C0C19A28B4800BF0948 /* CoreDataHelperTests.swift */; };
+		D5AF3C1A19A28BC700BF0948 /* CoreDataHelperSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AF3C1619A28BC700BF0948 /* CoreDataHelperSwift.swift */; };
+		D5AF3C1B19A28BC700BF0948 /* CoreDataHelperSwift+Saver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AF3C1719A28BC700BF0948 /* CoreDataHelperSwift+Saver.swift */; };
+		D5AF3C1C19A28BC700BF0948 /* NSManagedObject+CreationSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AF3C1819A28BC700BF0948 /* NSManagedObject+CreationSwift.swift */; };
+		D5AF3C1D19A28BC700BF0948 /* NSManagedObject+FetchSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AF3C1919A28BC700BF0948 /* NSManagedObject+FetchSwift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +22,10 @@
 		D5AF3C0819A28B4800BF0948 /* CoreDataHelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataHelperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5AF3C0B19A28B4800BF0948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5AF3C0C19A28B4800BF0948 /* CoreDataHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelperTests.swift; sourceTree = "<group>"; };
+		D5AF3C1619A28BC700BF0948 /* CoreDataHelperSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelperSwift.swift; sourceTree = "<group>"; };
+		D5AF3C1719A28BC700BF0948 /* CoreDataHelperSwift+Saver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataHelperSwift+Saver.swift"; sourceTree = "<group>"; };
+		D5AF3C1819A28BC700BF0948 /* NSManagedObject+CreationSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+CreationSwift.swift"; sourceTree = "<group>"; };
+		D5AF3C1919A28BC700BF0948 /* NSManagedObject+FetchSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+FetchSwift.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,10 @@
 			isa = PBXGroup;
 			children = (
 				D5AF3C0219A28B4800BF0948 /* CoreDataHelper.h */,
+				D5AF3C1619A28BC700BF0948 /* CoreDataHelperSwift.swift */,
+				D5AF3C1719A28BC700BF0948 /* CoreDataHelperSwift+Saver.swift */,
+				D5AF3C1819A28BC700BF0948 /* NSManagedObject+CreationSwift.swift */,
+				D5AF3C1919A28BC700BF0948 /* NSManagedObject+FetchSwift.swift */,
 				D5AF3C0019A28B4800BF0948 /* Supporting Files */,
 			);
 			path = CoreDataHelper;
@@ -196,6 +208,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5AF3C1D19A28BC700BF0948 /* NSManagedObject+FetchSwift.swift in Sources */,
+				D5AF3C1B19A28BC700BF0948 /* CoreDataHelperSwift+Saver.swift in Sources */,
+				D5AF3C1C19A28BC700BF0948 /* NSManagedObject+CreationSwift.swift in Sources */,
+				D5AF3C1A19A28BC700BF0948 /* CoreDataHelperSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,6 +314,7 @@
 		D5AF3C1119A28B4800BF0948 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -307,12 +324,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		D5AF3C1219A28B4800BF0948 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -374,6 +393,7 @@
 				D5AF3C1219A28B4800BF0948 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D5AF3C1319A28B4800BF0948 /* Build configuration list for PBXNativeTarget "CoreDataHelperTests" */ = {
 			isa = XCConfigurationList;
@@ -382,6 +402,7 @@
 				D5AF3C1519A28B4800BF0948 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
