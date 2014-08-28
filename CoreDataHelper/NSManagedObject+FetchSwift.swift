@@ -27,7 +27,7 @@ extension NSManagedObject {
         if sortTerm == nil {
             fetchRequest.sortDescriptors = nil
         } else {
-            fetchRequest.sortDescriptors = [NSSortDescriptor(key: sortTerm, ascending: ascending)]
+            fetchRequest.sortDescriptors = [NSSortDescriptor(key: sortTerm!, ascending: ascending)]
         }
         
         if fetchLimit > 0 {

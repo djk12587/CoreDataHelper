@@ -15,11 +15,11 @@ protocol NamedManagedObject {
     
 }
 
-/*extension ExampleEntitySwift : NamedManagedObject {
-    override class func entityName() -> String {
-        return NSStringFromClass(self)
-    }
-}*/
+//extension ExampleEntitySwift : NamedManagedObject {
+//    override class func entityName() -> String {
+//        return NSStringFromClass(self)
+//    }
+//}
 
 extension NSManagedObject : NamedManagedObject {
     

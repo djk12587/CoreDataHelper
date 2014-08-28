@@ -7,25 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D5AF3C0319A28B4800BF0948 /* CoreDataHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = D5AF3C0219A28B4800BF0948 /* CoreDataHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D5912A5919AF8AEE0001E76C /* CoreDataHelperSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5912A5519AF8AEE0001E76C /* CoreDataHelperSwift.swift */; };
+		D5912A5A19AF8AEE0001E76C /* CoreDataHelperSwift+Saver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5912A5619AF8AEE0001E76C /* CoreDataHelperSwift+Saver.swift */; };
+		D5912A5B19AF8AEE0001E76C /* NSManagedObject+CreationSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5912A5719AF8AEE0001E76C /* NSManagedObject+CreationSwift.swift */; };
+		D5912A5C19AF8AEE0001E76C /* NSManagedObject+FetchSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5912A5819AF8AEE0001E76C /* NSManagedObject+FetchSwift.swift */; };
 		D5AF3C0D19A28B4800BF0948 /* CoreDataHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AF3C0C19A28B4800BF0948 /* CoreDataHelperTests.swift */; };
-		D5AF3C1A19A28BC700BF0948 /* CoreDataHelperSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AF3C1619A28BC700BF0948 /* CoreDataHelperSwift.swift */; };
-		D5AF3C1B19A28BC700BF0948 /* CoreDataHelperSwift+Saver.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AF3C1719A28BC700BF0948 /* CoreDataHelperSwift+Saver.swift */; };
-		D5AF3C1C19A28BC700BF0948 /* NSManagedObject+CreationSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AF3C1819A28BC700BF0948 /* NSManagedObject+CreationSwift.swift */; };
-		D5AF3C1D19A28BC700BF0948 /* NSManagedObject+FetchSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5AF3C1919A28BC700BF0948 /* NSManagedObject+FetchSwift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D5912A5519AF8AEE0001E76C /* CoreDataHelperSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelperSwift.swift; sourceTree = "<group>"; };
+		D5912A5619AF8AEE0001E76C /* CoreDataHelperSwift+Saver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataHelperSwift+Saver.swift"; sourceTree = "<group>"; };
+		D5912A5719AF8AEE0001E76C /* NSManagedObject+CreationSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+CreationSwift.swift"; sourceTree = "<group>"; };
+		D5912A5819AF8AEE0001E76C /* NSManagedObject+FetchSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+FetchSwift.swift"; sourceTree = "<group>"; };
 		D5AF3BFD19A28B4800BF0948 /* CoreDataHelper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CoreDataHelper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5AF3C0119A28B4800BF0948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D5AF3C0219A28B4800BF0948 /* CoreDataHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataHelper.h; sourceTree = "<group>"; };
 		D5AF3C0819A28B4800BF0948 /* CoreDataHelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataHelperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5AF3C0B19A28B4800BF0948 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D5AF3C0C19A28B4800BF0948 /* CoreDataHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelperTests.swift; sourceTree = "<group>"; };
-		D5AF3C1619A28BC700BF0948 /* CoreDataHelperSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelperSwift.swift; sourceTree = "<group>"; };
-		D5AF3C1719A28BC700BF0948 /* CoreDataHelperSwift+Saver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreDataHelperSwift+Saver.swift"; sourceTree = "<group>"; };
-		D5AF3C1819A28BC700BF0948 /* NSManagedObject+CreationSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+CreationSwift.swift"; sourceTree = "<group>"; };
-		D5AF3C1919A28BC700BF0948 /* NSManagedObject+FetchSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+FetchSwift.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,11 +65,10 @@
 		D5AF3BFF19A28B4800BF0948 /* CoreDataHelper */ = {
 			isa = PBXGroup;
 			children = (
-				D5AF3C0219A28B4800BF0948 /* CoreDataHelper.h */,
-				D5AF3C1619A28BC700BF0948 /* CoreDataHelperSwift.swift */,
-				D5AF3C1719A28BC700BF0948 /* CoreDataHelperSwift+Saver.swift */,
-				D5AF3C1819A28BC700BF0948 /* NSManagedObject+CreationSwift.swift */,
-				D5AF3C1919A28BC700BF0948 /* NSManagedObject+FetchSwift.swift */,
+				D5912A5519AF8AEE0001E76C /* CoreDataHelperSwift.swift */,
+				D5912A5619AF8AEE0001E76C /* CoreDataHelperSwift+Saver.swift */,
+				D5912A5719AF8AEE0001E76C /* NSManagedObject+CreationSwift.swift */,
+				D5912A5819AF8AEE0001E76C /* NSManagedObject+FetchSwift.swift */,
 				D5AF3C0019A28B4800BF0948 /* Supporting Files */,
 			);
 			path = CoreDataHelper;
@@ -109,7 +106,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5AF3C0319A28B4800BF0948 /* CoreDataHelper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,10 +204,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5AF3C1D19A28BC700BF0948 /* NSManagedObject+FetchSwift.swift in Sources */,
-				D5AF3C1B19A28BC700BF0948 /* CoreDataHelperSwift+Saver.swift in Sources */,
-				D5AF3C1C19A28BC700BF0948 /* NSManagedObject+CreationSwift.swift in Sources */,
-				D5AF3C1A19A28BC700BF0948 /* CoreDataHelperSwift.swift in Sources */,
+				D5912A5C19AF8AEE0001E76C /* NSManagedObject+FetchSwift.swift in Sources */,
+				D5912A5A19AF8AEE0001E76C /* CoreDataHelperSwift+Saver.swift in Sources */,
+				D5912A5B19AF8AEE0001E76C /* NSManagedObject+CreationSwift.swift in Sources */,
+				D5912A5919AF8AEE0001E76C /* CoreDataHelperSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
