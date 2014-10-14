@@ -13,12 +13,13 @@ private let _defaultStore = CoreDataHelperSwift()
 
 class CoreDataHelperSwift: NSObject {
     
+    #error set this to the name of your model file without the fileExtension
     let coreDataModelFileName = "SwiftModel"
     
     //MARK: - Getters
     lazy var managedObjectModel:NSManagedObjectModel = {
         var modelURL = NSBundle.mainBundle().URLForResource(self.coreDataModelFileName, withExtension: "momd")
-        var objectModel = NSManagedObjectModel(contentsOfURL: modelURL)
+        var objectModel = NSManagedObjectModel(contentsOfURL: modelURL!)
         
         return objectModel
     }()
