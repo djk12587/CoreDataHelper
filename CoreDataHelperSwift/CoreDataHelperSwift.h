@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 DanKoza. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for CoreDataHelperSwift.
 FOUNDATION_EXPORT double CoreDataHelperSwiftVersionNumber;

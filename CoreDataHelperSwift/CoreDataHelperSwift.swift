@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Allstate R&D. All rights reserved.
 //
 
-import UIKit
 import CoreData
+import Foundation
 
 private let _defaultStore = CoreDataHelperSwift()
 
