@@ -11,11 +11,11 @@ import CoreData
 
 extension NSManagedObject {
     
-    class func core_findAllWithPredicate(predicate:NSPredicate?, context:NSManagedObjectContext) -> NSArray? {
+    public class func core_findAllWithPredicate(predicate:NSPredicate?, context:NSManagedObjectContext) -> NSArray? {
         return self.find(nil, ascending: true, predicate: predicate, context: context, fetchLimit: 0)
     }
     
-    class func core_findAllSortedBy(sortTerm:NSString?, ascending:Bool, predicate:NSPredicate?, context:NSManagedObjectContext) -> NSArray? {
+    public class func core_findAllSortedBy(sortTerm:NSString?, ascending:Bool, predicate:NSPredicate?, context:NSManagedObjectContext) -> NSArray? {
         return self.find(sortTerm, ascending: ascending, predicate: predicate, context: context, fetchLimit: 0)
     }
     

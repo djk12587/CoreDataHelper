@@ -10,11 +10,11 @@ import Foundation
 import CoreData
 
 extension CoreDataHelperSwift {
+
+    public typealias CoreSimpleBlock = () -> ()
+    public typealias CoreErrorBlock = (error:NSError?) -> ()
     
-    typealias CoreSimpleBlock = () -> ()
-    typealias CoreErrorBlock = (error:NSError?) -> ()
-    
-    class func core_saveInMainContext(changes:CoreSimpleBlock) {
+    public class func core_saveInMainContext(changes:CoreSimpleBlock) {
         var context = self.defaultStore.mainQueueContext
         
         context.performBlock { () -> Void in
@@ -29,11 +29,11 @@ extension CoreDataHelperSwift {
         }
     }
     
-    class func core_saveInPrivateQueue(changes:CoreSimpleBlock) {
+    public class func core_saveInPrivateQueue(changes:CoreSimpleBlock) {
         self.core_saveInPrivateQueue(changes, completion:nil)
     }
     
-    class func core_saveInPrivateQueue(changes:CoreSimpleBlock, completion:CoreErrorBlock?) {
+    public class func core_saveInPrivateQueue(changes:CoreSimpleBlock, completion:CoreErrorBlock?) {
         var privateContext = self.defaultStore.privateQueueContext
         
         privateContext.performBlock { () -> Void in

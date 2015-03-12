@@ -11,7 +11,7 @@ import Foundation
 
 private let _defaultStore = CoreDataHelperSwift()
 
-class CoreDataHelperSwift: NSObject {
+public class CoreDataHelperSwift: NSObject {
     
     //#error set this to the name of your model file without the fileExtension
     let coreDataModelFileName = "SwiftModel"
@@ -101,21 +101,21 @@ class CoreDataHelperSwift: NSObject {
     
     //MARK: - Singleton Access
     
-    class var defaultStore: CoreDataHelperSwift {
+    public class var defaultStore: CoreDataHelperSwift {
         return _defaultStore
     }
     
-    class func getPrivateQueueContext() -> NSManagedObjectContext {
+    public class func getPrivateQueueContext() -> NSManagedObjectContext {
         return _defaultStore.privateQueueContext
     }
     
-    class func getMainQueueContext() -> NSManagedObjectContext {
+    public class func getMainQueueContext() -> NSManagedObjectContext {
         return _defaultStore.mainQueueContext
     }
     
     //MARK: - Fetch Helper
     
-    class func core_executeFetchRequest(request:NSFetchRequest, context:NSManagedObjectContext) -> NSArray? {
+    public class func core_executeFetchRequest(request:NSFetchRequest, context:NSManagedObjectContext) -> NSArray? {
         var results:NSArray?
         var error:NSError? = nil
         context.performBlockAndWait { () -> Void in
