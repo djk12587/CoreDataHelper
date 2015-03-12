@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:CoreDataHelper.xcodeproj">
+      location = "self:CoreDataHelperSwift.xcodeproj">
    </FileRef>
 </Workspace>

@@ -13,7 +13,7 @@ private let _defaultStore = CoreDataHelperSwift()
 
 class CoreDataHelperSwift: NSObject {
     
-    #error set this to the name of your model file without the fileExtension
+    //#error set this to the name of your model file without the fileExtension
     let coreDataModelFileName = "SwiftModel"
     
     //MARK: - Getters
@@ -21,24 +21,24 @@ class CoreDataHelperSwift: NSObject {
         var modelURL = NSBundle.mainBundle().URLForResource(self.coreDataModelFileName, withExtension: "momd")
         var objectModel = NSManagedObjectModel(contentsOfURL: modelURL!)
         
-        return objectModel
-    }()
+        return objectModel!
+        }()
     
     lazy var mainQueueContext:NSManagedObjectContext = {
-
+        
         var mainContext : NSManagedObjectContext = NSManagedObjectContext(concurrencyType: NSManagedObjectContextConcurrencyType.MainQueueConcurrencyType)
         mainContext.persistentStoreCoordinator = self.persistentStoreCoordinator
         return mainContext
-
-    }()
+        
+        }()
     
     lazy var privateQueueContext:NSManagedObjectContext = {
-
+        
         var privateContext : NSManagedObjectContext = NSManagedObjectContext(concurrencyType: NSManagedObjectContextConcurrencyType.PrivateQueueConcurrencyType)
         privateContext.persistentStoreCoordinator = self.persistentStoreCoordinator
         return privateContext
-
-    }()
+        
+        }()
     
     lazy var persistentStoreCoordinator:NSPersistentStoreCoordinator = {
         var error:NSError?
@@ -49,16 +49,17 @@ class CoreDataHelperSwift: NSObject {
             println("Error adding persistent Store \(error)")
         }
         return persistentCoordinator
-    }()
-
+        }()
+    
     //MARK: - Stack set up helper methods
-
+    
     func persistentStoreURL() -> NSURL {
-        var appName:NSString? = NSBundle.mainBundle().infoDictionary["CFBundleName"] as? NSString
+        
+        var appName:NSString? = NSBundle.mainBundle().infoDictionary?["CFBundleName"] as? NSString
         appName = appName?.stringByAppendingString(".sqlite")
         return CoreDataHelperSwift.applicationDocumentsDirectory().URLByAppendingPathComponent(appName!)
     }
-
+    
     class func applicationDocumentsDirectory() -> NSURL {
         
         return NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask)[0] as NSURL
@@ -97,9 +98,9 @@ class CoreDataHelperSwift: NSObject {
         }
         objc_sync_exit(self)
     }
-
+    
     //MARK: - Singleton Access
-
+    
     class var defaultStore: CoreDataHelperSwift {
         return _defaultStore
     }
@@ -107,7 +108,7 @@ class CoreDataHelperSwift: NSObject {
     class func getPrivateQueueContext() -> NSManagedObjectContext {
         return _defaultStore.privateQueueContext
     }
-
+    
     class func getMainQueueContext() -> NSManagedObjectContext {
         return _defaultStore.mainQueueContext
     }
@@ -126,8 +127,8 @@ class CoreDataHelperSwift: NSObject {
             println(errorMessage)
             error = NSError(domain: NSSQLiteErrorDomain, code: 1, userInfo: ["error" : errorMessage])
         }
-     
+        
         return results
     }
-
+    
 }

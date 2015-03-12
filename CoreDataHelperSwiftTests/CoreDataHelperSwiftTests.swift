@@ -1,15 +1,15 @@
 //
-//  CoreDataHelperTests.swift
-//  CoreDataHelperTests
+//  CoreDataHelperSwiftTests.swift
+//  CoreDataHelperSwiftTests
 //
-//  Created by Daniel Koza on 8/18/14.
-//  Copyright (c) 2014 Daniel Koza. All rights reserved.
+//  Created by Daniel Koza on 3/12/15.
+//  Copyright (c) 2015 DanKoza. All rights reserved.
 //
 
 import UIKit
 import XCTest
 
-class CoreDataHelperTests: XCTestCase {
+class CoreDataHelperSwiftTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
