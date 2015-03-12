@@ -115,8 +115,8 @@ public class CoreDataHelperSwift: NSObject {
     
     //MARK: - Fetch Helper
     
-    public class func core_executeFetchRequest(request:NSFetchRequest, context:NSManagedObjectContext) -> NSArray? {
-        var results:NSArray?
+    public class func core_executeFetchRequest(request:NSFetchRequest, context:NSManagedObjectContext) -> [AnyObject]? {
+        var results:[AnyObject]?
         var error:NSError? = nil
         context.performBlockAndWait { () -> Void in
             results = context.executeFetchRequest(request, error: &error)
