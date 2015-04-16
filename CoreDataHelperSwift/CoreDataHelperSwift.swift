@@ -45,7 +45,7 @@ public class CoreDataHelperSwift: NSObject {
         
         var persistentCoordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
         
-        if persistentCoordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: self.persistentStoreURL(), options: self.persistentStoreOptions(), error: &error) == nil {
+        if persistentCoordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: self.persistentStoreURL(), options: self.persistentStoreOptions() as [NSObject : AnyObject], error: &error) == nil {
             println("Error adding persistent Store \(error)")
         }
         return persistentCoordinator
@@ -57,12 +57,12 @@ public class CoreDataHelperSwift: NSObject {
         
         var appName:NSString? = NSBundle.mainBundle().infoDictionary?["CFBundleName"] as? NSString
         appName = appName?.stringByAppendingString(".sqlite")
-        return CoreDataHelperSwift.applicationDocumentsDirectory().URLByAppendingPathComponent(appName!)
+        return CoreDataHelperSwift.applicationDocumentsDirectory().URLByAppendingPathComponent(appName! as String)
     }
     
     class func applicationDocumentsDirectory() -> NSURL {
         
-        return NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask)[0] as NSURL
+        return NSFileManager.defaultManager().URLsForDirectory(NSSearchPathDirectory.DocumentDirectory, inDomains: NSSearchPathDomainMask.UserDomainMask)[0] as! NSURL
     }
     
     func persistentStoreOptions() -> NSDictionary {

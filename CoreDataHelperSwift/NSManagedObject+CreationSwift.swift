@@ -11,7 +11,7 @@ import CoreData
 
 protocol NamedManagedObject {
     
-    class func entityName() -> String;
+    static func entityName() -> String;
     
 }
 
